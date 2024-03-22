@@ -5,9 +5,9 @@ export default defineConfig({
   ssr: true,
   
   server: {
-    // On déploie le code sur Vercel, donc on va utiliser
-    // le preset `vercel` pour la configuration du serveur.
-    preset: "vercel"
+    // On déploie le code sur Cloudflare Pages, donc on va utiliser
+    // le preset `cloudflare-pages` pour la configuration du serveur.
+    preset: "cloudflare-pages"
   },
   
   vite: {
