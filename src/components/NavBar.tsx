@@ -7,6 +7,7 @@ import clsx from "clsx";
 import MdiChevronDown from '~icons/mdi/chevron-down'
 import MdiMenu from '~icons/mdi/menu'
 import MdiClose from '~icons/mdi/close'
+import MdiTennis from '~icons/mdi/tennis'
 
 const NavBar: Component = () => {
   const vw = createBreakpoints(BREAKPOINTS);
@@ -108,11 +109,12 @@ const NavBar: Component = () => {
       </Show>
 
       <a
-        class="bg-orange text-white rounded-lg px-4 py-1.5"
+        class="bg-orange text-white rounded-lg p-2 mobile:(px-4 py-1.5) flex items-center gap-2"
         href="https://tenup.fft.fr/"
         target="_blank"
+        title="Réserver un terrain"
       >
-        Réserver un terrain
+        <MdiTennis /> <span class="hidden mobile:block">Réserver un terrain</span>
       </a>
 
       <Show when={!vw.tablet}>
