@@ -7,14 +7,19 @@
     "start": "vinxi start"
   },
   "devDependencies": {
+    "@iconify-json/mdi": "^1.1.64",
     "@types/node": "^20.11.30",
     "unocss": "^0.58.6",
+    "unplugin-icons": "^0.18.5",
     "vite": "^5.2.2"
   },
   "dependencies": {
+    "@kobalte/core": "^0.12.6",
+    "@solid-primitives/media": "^2.2.8",
     "@solidjs/router": "^0.13.1",
     "@solidjs/start": "^0.7.7",
     "@unocss/reset": "^0.58.6",
+    "clsx": "^2.1.0",
     "solid-js": "^1.8.16",
     "vinxi": "^0.3.10"
   },

@@ -1,4 +1,5 @@
 import { defineConfig } from "@solidjs/start/config";
+import icons from "unplugin-icons/vite";
 import unocss from "unocss/vite";
 
 export default defineConfig({
@@ -11,6 +12,9 @@ export default defineConfig({
   },
   
   vite: {
-    plugins: [unocss()]
+    plugins: [
+      icons({ compiler: "solid" }),
+      unocss()
+    ]
   }
 });
