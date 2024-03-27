@@ -13,6 +13,7 @@
 		
     "types": [
       "unplugin-icons/types/solid",
+      "@solidjs/start/env",
       "vinxi/client",
       "vite/client",
       "node"
