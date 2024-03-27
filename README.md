@@ -33,7 +33,7 @@ pnpm dev
 
 Vous pourrez ensuite accéder localement à l'interface web à l'adresse <http://localhost:3000>.
 
-### MaJ des types de la base PostgreSQL
+### Mettre à jour [les types de la base PostgreSQL](./src/server/database.types.ts)
 
 Il faut avoir le [CLI Supabase](https://github.com/supabase/cli) installé, [connecté](https://supabase.com/docs/reference/cli/supabase-login) et [lié au projet](https://supabase.com/docs/reference/cli/supabase-link) avant d'effectuer cette opération.
 
