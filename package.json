@@ -9,19 +9,21 @@
   "devDependencies": {
     "@iconify-json/mdi": "^1.1.64",
     "@types/node": "^20.11.30",
-    "unocss": "^0.58.6",
+    "typescript": "^5.4.3",
+    "unocss": "^0.58.7",
     "unplugin-icons": "^0.18.5",
-    "vite": "^5.2.2"
+    "vite": "^5.2.6"
   },
   "dependencies": {
     "@kobalte/core": "^0.12.6",
     "@solid-primitives/media": "^2.2.8",
     "@solidjs/router": "^0.13.1",
-    "@solidjs/start": "^0.7.7",
-    "@unocss/reset": "^0.58.6",
+    "@solidjs/start": "1.0.0-rc.0",
+    "@supabase/supabase-js": "^2.40.0",
+    "@unocss/reset": "^0.58.7",
     "clsx": "^2.1.0",
     "solid-js": "^1.8.16",
-    "vinxi": "^0.3.10"
+    "vinxi": "^0.3.11"
   },
   "engines": {
     "node": ">=18"
