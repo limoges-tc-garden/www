@@ -10,17 +10,17 @@
     "@iconify-json/mdi": "^1.1.64",
     "@types/node": "^20.11.30",
     "typescript": "^5.4.3",
-    "unocss": "^0.58.7",
+    "unocss": "^0.58.8",
     "unplugin-icons": "^0.18.5",
-    "vite": "^5.2.6"
+    "vite": "^5.2.7"
   },
   "dependencies": {
     "@kobalte/core": "^0.12.6",
     "@solid-primitives/media": "^2.2.8",
     "@solidjs/router": "^0.13.1",
     "@solidjs/start": "1.0.0-rc.0",
-    "@supabase/supabase-js": "^2.40.0",
-    "@unocss/reset": "^0.58.7",
+    "@supabase/supabase-js": "^2.41.1",
+    "@unocss/reset": "^0.58.8",
     "clsx": "^2.1.0",
     "solid-js": "^1.8.16",
     "vinxi": "^0.3.11"

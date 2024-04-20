@@ -10,7 +10,7 @@
 - [UnoCSS](https://unocss.dev/) pour gérer le style
 - [Kobalte](https://kobalte.dev/) pour les composants utilitaires et accessibles
 - [Cloudflare Pages](https://pages.cloudflare.com/) pour le déploiement du projet
-- [Supabase](https://supabase.com/) pour la base de données, authentification et stockage de fichiers
+- [Supabase](https://supabase.com/) pour la lecture de la base de données et des fichiers
 
 ## Développement
 
