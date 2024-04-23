@@ -1,5 +1,5 @@
 import { type Component, type FlowComponent, Show, createSignal } from "solid-js";
-import { DropdownMenu } from "@kobalte/core";
+import { DropdownMenu, As } from "@kobalte/core";
 import { createBreakpoints } from "@solid-primitives/media";
 import { BREAKPOINTS } from "~/utils/constants";
 import clsx from "clsx";
@@ -19,11 +19,12 @@ const NavBar: Component = () => {
     return (
       <DropdownMenu.Item
         class="bg-white hover:bg-gray-100 px-4 py-1.5 rounded-lg text-sm"
-        as="a"
-        // @ts-expect-error: href is not a valid prop (not inherited from `a`)
-        href={props.href}
+        closeOnSelect={false}
+        asChild
       >
-        {props.children}
+        <As component="a" href={props.href}>
+          {props.children}
+        </As>
       </DropdownMenu.Item>
     )
   };
