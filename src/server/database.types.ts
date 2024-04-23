@@ -12,6 +12,162 @@ export type Database = {
       articles: {
         Row: {
           banner_file_id: number | null
+          content: Json | null
+          created_at: string
+          draft: boolean
+          id: number
+          title: string
+          updated_at: string
+        }
+        Insert: {
+          banner_file_id?: number | null
+          content?: Json | null
+          created_at?: string
+          draft?: boolean
+          id?: number
+          title?: string
+          updated_at?: string
+        }
+        Update: {
+          banner_file_id?: number | null
+          content?: Json | null
+          created_at?: string
+          draft?: boolean
+          id?: number
+          title?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "public_articles_banner_file_id_fkey"
+            columns: ["banner_file_id"]
+            isOneToOne: false
+            referencedRelation: "files"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      constants: {
+        Row: {
+          id: Database["public"]["Enums"]["CONSTANT_ID"]
+          value: string
+        }
+        Insert: {
+          id: Database["public"]["Enums"]["CONSTANT_ID"]
+          value?: string
+        }
+        Update: {
+          id?: Database["public"]["Enums"]["CONSTANT_ID"]
+          value?: string
+        }
+        Relationships: []
+      }
+      files: {
+        Row: {
+          description: string
+          extension: string
+          id: number
+          uploaded_at: string
+        }
+        Insert: {
+          description?: string
+          extension: string
+          id?: number
+          uploaded_at?: string
+        }
+        Update: {
+          description?: string
+          extension?: string
+          id?: number
+          uploaded_at?: string
+        }
+        Relationships: []
+      }
+      leaders: {
+        Row: {
+          direction: boolean
+          first_name: string
+          headline: string
+          id: number
+          last_name: string
+        }
+        Insert: {
+          direction?: boolean
+          first_name: string
+          headline: string
+          id?: number
+          last_name: string
+        }
+        Update: {
+          direction?: boolean
+          first_name?: string
+          headline?: string
+          id?: number
+          last_name?: string
+        }
+        Relationships: []
+      }
+      partners: {
+        Row: {
+          id: number
+          logo_file_id: number | null
+          name: string
+          url: string | null
+        }
+        Insert: {
+          id?: number
+          logo_file_id?: number | null
+          name: string
+          url?: string | null
+        }
+        Update: {
+          id?: number
+          logo_file_id?: number | null
+          name?: string
+          url?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "public_partners_logo_file_id_fkey"
+            columns: ["logo_file_id"]
+            isOneToOne: false
+            referencedRelation: "files"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      teachers: {
+        Row: {
+          avatar_file_id: number | null
+          first_name: string
+          id: number
+          last_name: string
+        }
+        Insert: {
+          avatar_file_id?: number | null
+          first_name: string
+          id?: number
+          last_name: string
+        }
+        Update: {
+          avatar_file_id?: number | null
+          first_name?: string
+          id?: number
+          last_name?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "public_teachers_avatar_file_id_fkey"
+            columns: ["avatar_file_id"]
+            isOneToOne: false
+            referencedRelation: "files"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      tournaments: {
+        Row: {
+          banner_file_id: number | null
           content: string
           created_at: string
           draft: boolean
@@ -39,34 +195,13 @@ export type Database = {
         }
         Relationships: [
           {
-            foreignKeyName: "public_articles_banner_file_id_fkey"
+            foreignKeyName: "public_tournaments_banner_file_id_fkey"
             columns: ["banner_file_id"]
             isOneToOne: false
             referencedRelation: "files"
             referencedColumns: ["id"]
           },
         ]
-      }
-      files: {
-        Row: {
-          description: string
-          id: number
-          mime: string
-          uploaded_at: string
-        }
-        Insert: {
-          description?: string
-          id?: number
-          mime?: string
-          uploaded_at?: string
-        }
-        Update: {
-          description?: string
-          id?: number
-          mime?: string
-          uploaded_at?: string
-        }
-        Relationships: []
       }
     }
     Views: {
@@ -76,7 +211,15 @@ export type Database = {
       [_ in never]: never
     }
     Enums: {
-      [_ in never]: never
+      CONSTANT_ID:
+        | "TEACHING_DESCRIPTION"
+        | "YOUTUBE_URL"
+        | "FACEBOOK_URL"
+        | "ADDRESS_LINE_1"
+        | "ADDRESS_LINE_2"
+        | "PHONE_NUMBER"
+        | "CLUB_ID"
+        | "CONTACT_EMAIL"
     }
     CompositeTypes: {
       [_ in never]: never
