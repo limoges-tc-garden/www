@@ -77,3 +77,31 @@ export const getLatestTournament = cache(async () => {
 
   return tournament;
 }, "latestTournament");
+
+interface Leader {
+  first_name: string
+  last_name: string
+  direction: boolean
+  headline: string
+}
+
+export const getLeaders = cache(async () => {
+  "use server";
+  const { supabase } = await import("./supabase");
+  const { data } = await supabase.from("leaders").select(`
+    first_name,
+    last_name,
+    direction,
+    headline
+  `.trim());
+
+  const direction: Leader[] = [];
+  const others: Leader[] = [];
+
+  for (const leader of (data ?? []) as unknown as Leader[]) {
+    if (leader.direction) direction.push(leader);
+    else others.push(leader);
+  }
+
+  return { direction, others };
+}, "leaders");
