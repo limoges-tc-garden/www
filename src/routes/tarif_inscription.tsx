@@ -1,4 +1,5 @@
 import { type FlowComponent, type Component } from "solid-js";
+import { CLUB_EMAIL, CLUB_PHONE } from "~/utils/constants";
 
 const TarifCard: FlowComponent<{ title: string }> = (props) => (
   <div>
@@ -23,8 +24,8 @@ const Page: Component = () => {
         <h2>Inscription</h2>
         <p>Pour vous inscrire, veuillez nous contacter :</p>
         <ul>
-          <li>Adresse email: <a href="mailto:contact@ltcg.eu">contact@ltcg.eu</a></li>
-          <li>Téléphone: <a href="tel:0555342408">05 55 34 24 08</a></li>
+          <li>Adresse email: <a href={`mailto:${CLUB_EMAIL}`}>{CLUB_EMAIL}</a></li>
+          <li>Téléphone: <a href={`tel:${CLUB_PHONE.split(" ").join("")}`}>{CLUB_PHONE}</a></li>
         </ul>
       </section>
 
