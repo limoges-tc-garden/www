@@ -88,6 +88,7 @@ const Page: Component = () => {
         <p>Les courts sont chauffés gratuitement sous la bulle l'hiver.</p>
         <p>CEC (Centre d’entraînement de club) : le joueur s'engage à participer aux matchs par équipe durant toute la saison.</p>
         <p>Modes de règlement acceptés : en ligne sur TENUP, chèque (à l'ordre du LTCG), prélèvement en ligne, espèces, tickets CAF, coupons sports, chèques vacances, etc.</p>
+        <p>Rappel : tout adhérent doit avoir un certificat médical de non contre indication à la pratique du tennis en compétition valable 3 ans et/ou attester avoir rempli le questionnaire de santé, ainsi que de sa licence de l'année sportive.</p>
       </section>
     </div>
   );
