@@ -1,4 +1,4 @@
-import { For, Show, type Component } from "solid-js";
+import { For, Show, createMemo, type Component } from "solid-js";
 import { createAsync, type RouteDefinition } from "@solidjs/router";
 import { getArticles } from "~/server/lib";
 

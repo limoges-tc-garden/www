@@ -43,6 +43,23 @@ export const getLatestArticle = cache(async () => {
   return article;
 }, "latestArticle");
 
+export const getArticle = cache(async (id: number) => {
+  "use server";
+  const { supabase } = await import("./supabase");
+  const { data } = await supabase.from("articles").select("*, banner_file_id(*)").eq("id", id).single();
+  if (!data) return null;
+  
+  const article = {
+    ...data,
+    banner_file_url: ("banner_file_id" in data && data.banner_file_id !== null)
+      // @ts-expect-error
+      ? await getURLFromFile(data.banner_file_id)
+      : null
+  };
+
+  return article;
+}, "article");
+
 export const getTournaments = cache(async () => {
   "use server";
   const { supabase } = await import("./supabase");
@@ -77,6 +94,23 @@ export const getLatestTournament = cache(async () => {
 
   return tournament;
 }, "latestTournament");
+
+export const getTournament = cache(async (id: number) => {
+  "use server";
+  const { supabase } = await import("./supabase");
+  const { data } = await supabase.from("tournaments").select("*, banner_file_id(*)").eq("id", id).single();
+  if (!data) return null;
+  
+  const tournament = {
+    ...data,
+    banner_file_url: ("banner_file_id" in data && data.banner_file_id !== null)
+      // @ts-expect-error
+      ? await getURLFromFile(data.banner_file_id)
+      : null
+  };
+
+  return tournament;
+}, "tournament");
 
 interface Leader {
   first_name: string
