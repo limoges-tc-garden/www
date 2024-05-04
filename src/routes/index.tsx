@@ -15,7 +15,7 @@ const Page: Component = () => {
 
   return (
     <main class="w-full py-4 px-6 space-y-2 max-w-[1000px] mx-auto">
-      <div class="flex gap-2 justify-between my-6">
+      <div class="flex flex-col tablet:flex-row gap-2 justify-between my-6">
         <section class="flex flex-col w-full gap-4">
           <h2 class="font-bold text-xl text-center">La dernière actualité</h2>
 
