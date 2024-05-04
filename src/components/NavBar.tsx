@@ -1,8 +1,9 @@
 import { type Component, type FlowComponent, Show, createSignal } from "solid-js";
-import { DropdownMenu, As } from "@kobalte/core";
 import { createBreakpoints } from "@solid-primitives/media";
-import { BREAKPOINTS } from "~/utils/constants";
+import { DropdownMenu } from "@kobalte/core";
 import clsx from "clsx";
+
+import { BREAKPOINTS } from "~/utils/constants";
 
 import MdiChevronDown from '~icons/mdi/chevron-down'
 import MdiMenu from '~icons/mdi/menu'
@@ -19,12 +20,10 @@ const NavBar: Component = () => {
     return (
       <DropdownMenu.Item
         class="bg-white hover:bg-gray-100 px-4 py-1.5 rounded-lg text-sm"
-        closeOnSelect={false}
-        asChild
+        href={props.href}
+        as="a"
       >
-        <As component="a" href={props.href}>
-          {props.children}
-        </As>
+        {props.children}
       </DropdownMenu.Item>
     )
   };
