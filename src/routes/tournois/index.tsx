@@ -13,9 +13,9 @@ const Page: Component = () => {
 
   return (
     <main class="w-full px-6 space-y-2 max-w-[1000px] mx-auto">
-      <h2 class="font-bold text-3xl pb-8 text-center">
+      <h1 class="font-bold text-3xl pb-8 text-center">
         Résultats et tournois
-      </h2>
+      </h1>
 
       <div class="flex flex-wrap gap-4 justify-between">
         <For each={tournaments()}>
