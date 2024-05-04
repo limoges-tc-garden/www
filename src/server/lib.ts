@@ -81,7 +81,7 @@ export const getTournaments = cache(async () => {
 export const getLatestTournament = cache(async () => {
   "use server";
   const { supabase } = await import("./supabase");
-  const { data } = await supabase.from("tournaments").select("*, banner_file_id(*)").order("created_at", { ascending: false }).limit(1).single();
+  const { data } = await supabase.from("tournaments").select("id, created_at, updated_at, title, banner_file_id(*)").order("created_at", { ascending: false }).limit(1).single();
   if (!data) return null;
   
   const tournament = {
