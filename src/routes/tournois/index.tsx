@@ -12,8 +12,8 @@ const Page: Component = () => {
   const tournaments = createAsync(() => getTournaments());
 
   return (
-    <main class="w-full py-4 px-6 space-y-2 max-w-[1000px] mx-auto">
-      <h2 class="font-bold text-3xl pt-6 pb-8 text-center">
+    <main class="w-full px-6 space-y-2 max-w-[1000px] mx-auto">
+      <h2 class="font-bold text-3xl pb-8 text-center">
         Résultats et tournois
       </h2>
 

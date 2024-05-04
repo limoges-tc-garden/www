@@ -1,4 +1,4 @@
-import { For, Show, type Component } from "solid-js";
+import { For, type Component } from "solid-js";
 import { createAsync, type RouteDefinition } from "@solidjs/router";
 import { getLeaders } from "~/server/lib";
 
@@ -12,8 +12,8 @@ const Page: Component = () => {
   const leaders = createAsync(() => getLeaders());
 
   return (
-    <main class="w-full py-4 px-6 space-y-2 max-w-[1000px] mx-auto">
-      <h1 class="font-bold text-3xl pt-6 pb-8 text-center">
+    <main class="w-full px-6 space-y-2 max-w-[1000px] mx-auto">
+      <h1 class="font-bold text-3xl pb-8 text-center">
         Organigramme du club
       </h1>
 

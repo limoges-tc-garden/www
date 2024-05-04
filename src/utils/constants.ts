@@ -13,3 +13,6 @@ export const CLUB_ADDRESS = {
   POSTAL_CODE: "87000",
   CITY: "Limoges"
 } as const;
+
+export const FACEBOOK_URL = "https://www.facebook.com/people/LTCG-Tennis/100063102676523/";
+export const YOUTUBE_URL = "https://www.youtube.com/channel/UCF3K1Jf8hjFW8qliei8fQ3A";
