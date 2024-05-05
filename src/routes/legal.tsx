@@ -6,7 +6,7 @@ const Page: Component = () => {
   return (
     <>
       <BrowserTitle title="Mention légales" />
-      <main>
+      <main class="max-w-[1000px] mx-auto px-6">
         <h1 class="font-bold text-3xl pb-6 text-center">
           Mention légales
         </h1>
