@@ -20,7 +20,7 @@ const Page: Component = () => {
           <h2 class="font-bold text-xl text-center">La dernière actualité</h2>
 
           <div>
-            <Show when={latestArticle()} fallback={<p>Il n'y a toujours pas eu d'actualité.</p>}>
+            <Show when={latestArticle()} fallback={<p class="text-center">Il n'y a toujours pas eu d'actualité publié.</p>}>
               {(article) => (
                 <a href={`/actus/${article().id}`} role="article" class="flex flex-col w-full">
                   <div class="w-full h-[200px] rounded-lg overflow-hidden">
@@ -47,7 +47,7 @@ const Page: Component = () => {
           <h2 class="font-bold text-xl text-center">Le dernier résultat</h2>
 
           <div>
-            <Show when={latestTournament()} fallback={<p>Il n'y a toujours pas eu de tournois.</p>}>
+            <Show when={latestTournament()} fallback={<p class="text-center">Il n'y a toujours pas eu de tournois publié.</p>}>
               {(tournament) => (
                 <a href={`/tournois/${tournament().id}`} role="article" class="flex flex-col w-full">
                   <div class="w-full h-[200px] rounded-lg overflow-hidden">

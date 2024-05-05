@@ -20,8 +20,10 @@ const Page: Component = () => {
           Les actualités du club
         </h2>
 
-        <div class="flex flex-wrap gap-4 justify-between">
-          <For each={articles()}>
+        <div class="flex flex-wrap gap-4 justify-center">
+          <For each={articles()} fallback={
+            <p class="mx-auto">Aucun article publié, revenez plus tard !</p>
+          }>
             {(article) => (
               <a href={`/actus/${article.id}`} role="article" class="border flex flex-col w-full rounded-md overflow-hidden max-w-[300px] hover:border-orange hover:shadow transition">
                 <div class="w-full h-[200px]">

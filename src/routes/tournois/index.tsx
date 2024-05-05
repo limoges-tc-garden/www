@@ -21,8 +21,10 @@ const Page: Component = () => {
           Résultats et tournois
         </h1>
 
-        <div class="flex flex-wrap gap-4 justify-between">
-          <For each={tournaments()}>
+        <div class="flex flex-wrap gap-4 justify-center">
+          <For each={tournaments()} fallback={
+            <p class="mx-auto">Aucun tournoi publié, revenez plus tard !</p>
+          }>
             {(tournament) => (
               <a href={`/tournois/${tournament.id}`} role="article" class="border flex flex-col w-full rounded-md overflow-hidden max-w-[300px] hover:border-orange hover:shadow transition">
                 <div class="w-full h-[200px]">
