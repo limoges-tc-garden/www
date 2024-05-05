@@ -156,3 +156,20 @@ export const getPartners = cache(async () => {
 
   return output;
 }, "partners");
+
+export const getTeachers = cache(async () => {
+  "use server";
+  const { supabase } = await import("./supabase");
+  const { data } = await supabase.from("teachers").select("id, first_name, last_name, avatar_file_id(*)");
+  const teachers = data ?? [];
+
+  const output = await Promise.all(teachers.map(async (teacher) => ({
+    ...teacher,
+    avatar_url: ("avatar_file_id" in teacher && teacher.avatar_file_id !== null)
+      // @ts-expect-error
+      ? await getURLFromFile(teacher.avatar_file_id)
+      : null
+  })));
+
+  return output;
+}, "teachers");
