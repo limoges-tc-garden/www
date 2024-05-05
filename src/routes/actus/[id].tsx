@@ -23,13 +23,15 @@ const Page: Component<RouteSectionProps> = (props) => {
     <Show when={article()}>
       {(article) => (
         <div class="w-full py-4 px-6 space-y-2 max-w-[1000px] mx-auto">
-          <h1 class="font-bold text-3xl pt-6 pb-8 text-center">
+          <h1 class="font-bold text-3xl py-6 text-center">
             {article().title}
           </h1>
 
           <div class="flex flex-col gap-4">
             <Show when={article().banner_file_url}>
-              <img class="w-full h-[300px] object-cover" src={article().banner_file_url!} />
+              <div class="mx-auto pb-6">
+                <img class="max-h-[400px] rounded-lg" src={article().banner_file_url!} />
+              </div>
             </Show>
 
             <main innerHTML={articleHTML()} />

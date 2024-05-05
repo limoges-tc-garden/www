@@ -29,7 +29,9 @@ const Page: Component<RouteSectionProps> = (props) => {
 
           <div class="flex flex-col gap-4">
             <Show when={tournament().banner_file_url}>
-              <img class="w-full h-[300px] object-cover" src={tournament().banner_file_url!} />
+              <div class="mx-auto pb-6">
+                <img class="max-h-[400px] rounded-lg" src={tournament().banner_file_url!} />
+              </div>
             </Show>
 
             <main innerHTML={tournamentHTML()} />
