@@ -14,6 +14,9 @@ importers:
       '@solid-primitives/media':
         specifier: ^2.2.9
         version: 2.2.9(solid-js@1.8.17)
+      '@solidjs/meta':
+        specifier: ^0.29.3
+        version: 0.29.3(solid-js@1.8.17)
       '@solidjs/router':
         specifier: ^0.13.3
         version: 0.13.3(solid-js@1.8.17)
@@ -950,6 +953,11 @@ packages:
     resolution: {integrity: sha512-CqAwKb2T5Vi72+rhebSsqNZ9o67buYRdEJrIFzRXz3U59QqezuuxPsyzTSVCacwS5Pf109VRsgCJQoxKRoECZQ==}
     peerDependencies:
       solid-js: ^1.6.12
+
+  '@solidjs/meta@0.29.3':
+    resolution: {integrity: sha512-R2uirgjgyh3FPFh+rb840plF701N6GvM5w81/QeI61QwjXb4QzLkyI/uzXfC5UW8favpUn9KK9ILQeoTl6pX0A==}
+    peerDependencies:
+      solid-js: '>=1.8.4'
 
   '@solidjs/router@0.13.3':
     resolution: {integrity: sha512-p8zznlvnN3KySMXqT8irhubgDNTETNa/guaGHU/cZl7kuiPO3PmkWNYfoNCygtEpoxLmLpf62/ZKeyhFdZexsw==}
@@ -3748,6 +3756,10 @@ snapshots:
       solid-js: 1.8.17
 
   '@solid-primitives/utils@6.2.3(solid-js@1.8.17)':
+    dependencies:
+      solid-js: 1.8.17
+
+  '@solidjs/meta@0.29.3(solid-js@1.8.17)':
     dependencies:
       solid-js: 1.8.17
 
