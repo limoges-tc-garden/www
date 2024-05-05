@@ -3,7 +3,7 @@ import { createBreakpoints } from "@solid-primitives/media";
 import { DropdownMenu } from "@kobalte/core";
 import clsx from "clsx";
 
-import { BREAKPOINTS } from "~/utils/constants";
+import { BREAKPOINTS, CLUB_NAME } from "~/utils/constants";
 
 import MdiChevronDown from '~icons/mdi/chevron-down'
 import MdiMenu from '~icons/mdi/menu'
@@ -44,7 +44,7 @@ const NavBar: Component = () => {
   return (
     <nav class="flex gap-2 px-6 py-4.5 border-b items-center flex-justify-end h-[62px]">
       <a class="mr-auto" href="/">
-        Limoges TC Garden
+        <img src="/ltcg.jpg" alt={CLUB_NAME} title={CLUB_NAME} class="h-[48px]" />
       </a>
 
       <Show when={vw.tablet}>
