@@ -33,6 +33,7 @@ const Footer: Component = () => {
       </div>
 
       <div class="flex flex-col gap-4">
+        <img src="/ltcg.jpg" alt={CLUB_NAME} title={CLUB_NAME} class="max-w-[250px] mx-auto tablet:pb-4" />
         <p class="text-center">
           Retrouvez nous sur les réseaux !
         </p>
