@@ -33,7 +33,9 @@ const Footer: Component = () => {
       </div>
 
       <div class="flex flex-col gap-4">
-        <p>Retrouvez nous sur les réseaux !</p>
+        <p class="text-center">
+          Retrouvez nous sur les réseaux !
+        </p>
         <div class="flex gap-6 text-4xl justify-center items-center text-orange">
           <a href={FACEBOOK_URL} target="_blank">
             <MdiFacebook />
