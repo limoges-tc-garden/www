@@ -22,7 +22,7 @@ const Page: Component = () => {
 
         <div class="flex flex-wrap items-center justify-center gap-2">
           <For each={partners()} fallback={
-            <p>Aucun partenaires, pour le moment.</p>
+            <p>Aucun partenaire, pour le moment.</p>
           }>
             {(partner) => (
               <a href={partner.url || "javascript:void(0)"} target={partner.url ? "_blank" : void 0}>
