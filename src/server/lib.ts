@@ -139,3 +139,20 @@ export const getLeaders = cache(async () => {
 
   return { direction, others };
 }, "leaders");
+
+export const getPartners = cache(async () => {
+  "use server";
+  const { supabase } = await import("./supabase");
+  const { data } = await supabase.from("partners").select("id, name, url, logo_file_id(*)");
+  const partners = data ?? [];
+
+  const output = await Promise.all(partners.map(async (partner) => ({
+    ...partner,
+    logo_url: ("logo_file_id" in partner && partner.logo_file_id !== null)
+      // @ts-expect-error
+      ? await getURLFromFile(partner.logo_file_id)
+      : null
+  })));
+
+  return output;
+}, "partners");
