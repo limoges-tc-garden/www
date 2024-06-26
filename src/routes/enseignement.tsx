@@ -25,14 +25,12 @@ const Page: Component = () => {
             <p>Aucun partenaires, pour le moment.</p>
           }>
             {(teacher) => (
-              <div class="flex flex-col gap-2 items-center">
-                <div class="max-h-[200px] max-w-[200px]">
-                  <Show when={teacher.avatar_url} fallback={
-                    <span class="opacity-50">Pas de photo disponible</span>
-                  }>
-                    <img class="w-full object-contain rounded-lg" src={teacher.avatar_url!} />
-                  </Show>
-                </div>
+              <div class="flex flex-col gap-4 items-center">
+                <Show when={teacher.avatar_url} fallback={
+                  <span class="opacity-50">Pas de photo disponible</span>
+                }>
+                  <img class="h-48 w-48 object-cover rounded-full" src={teacher.avatar_url!} />
+                </Show>
                 <p>{teacher.first_name} <strong>{teacher.last_name.toUpperCase()}</strong></p>
               </div>
             )}
